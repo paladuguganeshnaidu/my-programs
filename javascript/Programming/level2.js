@@ -26,3 +26,23 @@ const user2 = new User("Alice", 25);
 console.log(user1); // Output: { name: 'Ganesh', age: 20 }
 console.log(user2); // Output: { name: 'Alice', age: 25 }
 const user3 = new User("Bob", 30);
+
+function Calculator() {
+  this.value = 0;
+
+  this.add = function(n) {
+    this.value += n;
+    return this;
+  };
+
+  this.subtract = function(n) {
+    this.value -= n;
+    return this;
+  };
+}
+
+const calculator = new Calculator();
+
+calculator.add(5).subtract(2);
+
+console.log(calculator.value);
