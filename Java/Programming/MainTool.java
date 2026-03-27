@@ -18,7 +18,7 @@ class DirScanner extends ScannerTool {
 }
 public class MainTool {
     public static void main(String[] args) {
-        ScannerTool tool
+        ScannerTool tool;
         tool = new PortScanner();
         tool.target = "example.com";
         tool.scan();
