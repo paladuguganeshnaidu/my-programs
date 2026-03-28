@@ -34,5 +34,6 @@ public class TwoSumSortedArrayTwoPointers{
         int target=sc.nextInt();
         int[] result=twosum(arr,target);
         System.out.println("Indices: "+result[0]+", "+result[1]);
+        sc.close();
     }
 }
