@@ -11,6 +11,7 @@ interface desiel extends car {
 }
 interface sadan extends car {
     void stop();
+    void move();
     void openDoor();
     default void display() {
         System.out.println("This is a sadan car");
@@ -52,6 +53,11 @@ class Hundai implements sadan {
     public void closeDoor() {
         System.out.println("Hundai door closed");
     }
+
+    @Override
+    public void display() {
+        System.out.println("This is a sadan car");
+    }
 }
 public class Task {
     public static void main(String[] args) {
@@ -60,6 +66,5 @@ public class Task {
         hundai.move();
         hundai.stop();
         hundai.display();
-    }
-    
+    }   
 }
