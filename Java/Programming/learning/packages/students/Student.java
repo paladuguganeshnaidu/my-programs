@@ -1,6 +1,4 @@
-package Programming.learning.packages.students;
-
-public class Student {
+﻿public class Student {
     private final String name;
     private final int rollNo;
 

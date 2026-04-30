@@ -1,6 +1,4 @@
-package Programming.learning.packages.teachers;
-
-public class Teacher {
+﻿public class Teacher {
     private final String name;
     private final String subject;
 

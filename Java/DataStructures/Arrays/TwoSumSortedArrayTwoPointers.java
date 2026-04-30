@@ -1,6 +1,4 @@
-package DataStructures.Arrays;
-
-import java.util.*;
+﻿import java.util.*;
 public class TwoSumSortedArrayTwoPointers{
     public static int[] twosum(int[] nums,int target){
         if(nums==null || nums.length<2) return new int[]{-1,-1};

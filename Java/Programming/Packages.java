@@ -1,6 +1,4 @@
-package Programming;
-
-import Programming.learning.packages.students.Student;
+﻿import Programming.learning.packages.students.Student;
 import Programming.learning.packages.teachers.Teacher;
 
 public class Packages {
