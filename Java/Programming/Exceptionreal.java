@@ -1,11 +1,11 @@
 import java.util.Scanner;
 
 public class Exceptionreal {
-    static String[] Refridge = {"cheese", "pepperoni", "chicken", "onions"};
-    static String[] Chiken_required = {"chicken", "paneer", "onions"};
-    static String[] Paneer_required = {"paneer", "cheese", "onions"};
-    static String[] Cheese_required = {"cheese", "paneer", "onions"};
-    static String[] Pepperoni_required = {"pepperoni", "cheese", "onions"};
+    static String[] Refridge = {"cheese", "pepperoni", "chicken", "onions","Pizza Base","Tomato sauce"};
+    static String[] Chiken_required = {"chicken", "cheese", "onions","Pizza Base","Tomato sauce"};
+    static String[] Paneer_required = {"paneer", "cheese", "onions","Pizza Base","Tomato sauce"};
+    static String[] Cheese_required = {"cheese", "veggies","Pizza Base","Tomato sauce"};
+    static String[] Pepperoni_required = {"pepperoni", "cheese", "onions","Pizza Base","Tomato sauce"};
     public static boolean IsAvail(String CustPizza) {
         String[] requirements;
         if (CustPizza.contains("chicken")) {

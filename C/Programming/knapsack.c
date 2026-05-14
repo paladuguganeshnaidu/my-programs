@@ -1,37 +1,41 @@
 #include <stdio.h>
 
-int max(int a, int b) {
-    if (a > b)
-        return a;
-    else
-        return b;
+int subset[100];
+int n, arr[100];   
+
+void print_subset(int ss) {
+	int i;
+    for (i = 0; i < ss; i++) {
+        printf("%d ", subset[i]);
+    }
+    printf("\n");
 }
 
-int knapsack(int W, int wt[], int val[], int n) {
-    int i, w;
-    int dp[n + 1][W + 1];
-
-    for (i = 0; i <= n; i++) {
-        for (w = 0; w <= W; w++) {
-            if (i == 0 || w == 0)
-                dp[i][w] = 0;
-            else if (wt[i - 1] <= w)
-                dp[i][w] = max(val[i - 1] + dp[i - 1][w - wt[i - 1]], dp[i - 1][w]);
-            else
-                dp[i][w] = dp[i - 1][w];
-        }
+void subsetsum(int ind, int ts, int cs, int ss) {
+    if (cs == ts) {  
+        print_subset(ss);
+        return;
+    }
+    if (ind == n || cs > ts) {   
+        return;
     }
 
-    return dp[n][W];
+    subset[ss] = arr[ind];
+    subsetsum(ind + 1, ts, cs + arr[ind], ss + 1);  
+
+    subsetsum(ind + 1, ts, cs, ss); 
 }
 
 int main() {
-    int val[] = {60, 100, 120};
-    int wt[] = {10, 20, 30};
-    int W = 50;
-    int n = sizeof(val) / sizeof(val[0]);
-
-    printf("%d\n", knapsack(W, wt, val, n));
+    scanf("%d", &n);  
+    int i;
+    for (i = 0; i < n; i++) { 
+        scanf("%d", &arr[i]);    
+    }
+    int ts;
+    scanf("%d", &ts);
+    int cs = 0, ind = 0;
+    subsetsum(ind, ts, cs, cs);
 
     return 0;
 }
