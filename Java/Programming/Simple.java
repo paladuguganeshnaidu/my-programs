@@ -1,4 +1,4 @@
-
+// Java program to demonstrate the state of a thread
 class ThreadSimple extends Thread {
     @Override
     public void run() {

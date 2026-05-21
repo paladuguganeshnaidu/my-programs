@@ -1,4 +1,4 @@
-
+﻿
 import java.util.Scanner;
 public class Lab2{
     static int sum_even=0,odd_product=1,sum=0;
